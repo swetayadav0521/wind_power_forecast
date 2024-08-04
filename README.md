@@ -1,5 +1,15 @@
 # Wind Power Prediction
 
+Predict Power based on below inputs:
+
+- **temperature_2m** - Temperature in degrees Fahrenheit at 2 meters above the surface
+- **relativehumidity_2m** - Relative humidity (as a percentage) at 2 meters above the surface
+- **dewpoint_2m** - Dew point in degrees Fahrenheit at 2 meters above the surface
+- **windspeed_10m** - Wind speed in meters per second at 10 meters above the surface
+- **windspeed_100m** - Wind speed in meters per second at 100 meters above the surface
+- **winddirection_10m** - Wind direction in degrees (0-360) at 10 meters above the surface
+- **winddirection_100m** - Wind direction in degrees (0-360) at 100 meters above the surface (0-360)
+- **windgusts_10m** - Wind gusts in meters per second at 100 meters above the surface
 ---
 
 ### Technical Concept

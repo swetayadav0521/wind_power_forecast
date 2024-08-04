@@ -1,6 +1,7 @@
 import logging
+import os
 import pandas as pd
-from django.http import JsonResponse
+from django.http import FileResponse
 from django.shortcuts import render
 from .tasks import train_model, make_prediction
 
@@ -41,16 +42,22 @@ def predict_from_file_view(request):
             
             df = df.drop(['Power'], axis=1)
 
-            # Convert DataFrame to dictionary for rendering in template
-            results = df.to_dict(orient='records')
-            logger.info("Results prepared for rendering")
+            # Save DataFrame to CSV
+            output_path = os.path.join(os.path.dirname(__file__), 'data', 'prediction_output.csv')
+            df.to_csv(output_path, index=False)
+            logger.info("Output file saved successfully at %s", output_path)
 
-            context = {'results': results}
-            return render(request, 'forecast/results.html', context)
+            # Create file response for download
+            response = FileResponse(open(output_path, 'rb'))
+            response['Content-Type'] = 'application/octet-stream'
+            response['Content-Disposition'] = 'attachment; filename=prediction_output.csv'
+            logger.info("File prepared for download")
+
+            return response
         
         except Exception as e:
             logger.error("An error occurred while processing the file: %s", str(e))
-            context = {'error': 'An error occurred during file processing or prediction.'}
+            context = {'error': f'An error occurred while processing the file: {str(e)}'}
     
     return render(request, 'forecast/predict.html', context)
 

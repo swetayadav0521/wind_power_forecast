@@ -22,14 +22,15 @@
             background-repeat: no-repeat;
         }
         .container {
-            background: #fffefe;
+            background: rgb(13 110 253 / 6%);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: rgba(255, 255, 255, 0.15);
             width: 80%;
             max-width: 800px;
+
         }
-        h1 {
+        h2 {
             color: #333;
             margin-bottom: 20px;
             text-align: center;
@@ -41,13 +42,13 @@
         }
         input[type="file"] {
             margin-bottom: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 4px;
             padding: 10px;
             width: 100%;
         }
         button {
-            background-color: #007bff;
+            background-color: #373b3e;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -86,18 +87,18 @@
 </head>
 <body style="background-image: url('{% static "forecast/images/dataset-cover.jpg" %}');">
     <div class="container">
-        <h1>Wind Power Prediction</h1>
-        <h3>Upload a csv file with these columns:</h3>
+        <h2>Wind Power Prediction</h2>
+        <h5>Upload a csv file with these columns:</h5>
             <div style="text-align: left; font-size: small;">
                 <ul>
-                    <li><strong>temperature_2m</strong> - Temperature in degrees Fahrenheit at 2 meters above the surface</li>
-                    <li><strong>relativehumidity_2m</strong> - Relative humidity (as a percentage) at 2 meters above the surface</li>
-                    <li><strong>dewpoint_2m</strong> - Dew point in degrees Fahrenheit at 2 meters above the surface</li>
-                    <li><strong>windspeed_10m</strong> - Wind speed in meters per second at 10 meters above the surface</li>
-                    <li><strong>windspeed_100m</strong> - Wind speed in meters per second at 100 meters above the surface</li>
-                    <li><strong>winddirection_10m</strong> - Wind direction in degrees (0-360) at 10 meters above the surface</li>
-                    <li><strong>winddirection_100m</strong> - Wind direction in degrees (0-360) at 100 meters above the surface (0-360)</li>
-                    <li><strong>windgusts_10m</strong> - Wind gusts in meters per second at 100 meters above the surface</li>
+                    <li><strong>temperature_2m</strong></li>
+                    <li><strong>relativehumidity_2m</strong></li>
+                    <li><strong>dewpoint_2m</strong></li>
+                    <li><strong>windspeed_10m</strong></li>
+                    <li><strong>windspeed_100m</strong></li>
+                    <li><strong>winddirection_10m</strong></li>
+                    <li><strong>winddirection_100m</strong></li>
+                    <li><strong>windgusts_10m</strong></li>
                 </ul>
             </div>
         <form method="POST" enctype="multipart/form-data">
