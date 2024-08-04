@@ -1,0 +1,11 @@
+Django>=3.0
+pandas
+numpy
+scikit-learn
+psycopg2-binary
+celery
+django-celery-beat
+django-prometheus
+prometheus-client
+black
+flake8
