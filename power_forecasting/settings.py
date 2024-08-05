@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-i)0^jl&=^rkttylw_*kuucj-arqp@m9zm0i6--jbscsupjg)!z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'web', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ["*", "web", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -81,11 +81,11 @@ WSGI_APPLICATION = "power_forecasting.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django_prometheus.db.backends.postgresql",
-        'NAME': 'django_db',
-        'USER': 'django_user',
-        'PASSWORD': 'django_password',
-        'HOST': 'db',
-        'PORT': '5432',
+        "NAME": "django_db",
+        "USER": "django_user",
+        "PASSWORD": "django_password",
+        "HOST": "db",
+        "PORT": "5432",
     }
 }
 
@@ -126,10 +126,10 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Default primary key field type
@@ -138,9 +138,9 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Celery settings
-CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672/'
-CELERY_RESULT_BACKEND = 'rpc://'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'UTC'
+CELERY_BROKER_URL = "amqp://guest:guest@rabbitmq:5672/"
+CELERY_RESULT_BACKEND = "rpc://"
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_TIMEZONE = "UTC"

@@ -51,7 +51,13 @@ docker-compose up
 
 4. Open `http://localhost:8000/predict` to access application and predict wind power generated based on attributes
 
+4. Open `http://localhost:9090` to access prometheous
+
+4. Open `http://localhost:3000` to access Grafana and create dashboard
+
 5. Press `CTRL+C` to quit the docker.
+
+
 
 
 

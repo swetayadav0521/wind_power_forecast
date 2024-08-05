@@ -20,6 +20,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include('forecast.urls')),
-    path('', include('django_prometheus.urls')),
+    path("", include("forecast.urls")),
+    path("", include("django_prometheus.urls")),
 ]
