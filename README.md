@@ -1,6 +1,6 @@
 # Wind Power Prediction
 
-Predict Power based on below inputs: 
+Predict Power based on below inputs:  
 
 - **temperature_2m** - Temperature in degrees Fahrenheit at 2 meters above the surface
 - **relativehumidity_2m** - Relative humidity (as a percentage) at 2 meters above the surface
